@@ -1,0 +1,171 @@
+//
+//  CrowFundingPrefixHeader.pch
+//  CrowdFunding
+//
+//  Created by liaoyp on 15/1/21.
+//  Copyright (c) 2015年 CF. All rights reserved.
+//
+
+#ifndef CrowdFunding_CrowFundingPrefixHeader_pch
+#define CrowdFunding_CrowFundingPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import "BaseModel.h"
+#import "Reachability.h"
+#import "UIKit/UIKit.h"
+#import "UserInfo.h"
+#import "DataRequest.h"
+#import "GWXGlobalConfig.h"
+#import "BaseViewController.h"
+#import "AppDelegate.h"
+#import "MBProgressHUD.h"
+#import "UIImage+MJ.h"
+#import "MobClick.h"
+#import "UmengEvent.h"
+#import "BlockAlertView.h"
+
+#define g_AppDelegate          [AppDelegate getAppDelegate]
+
+#define IsEmpty(str) (![str respondsToSelector:@selector(isEqualToString:)] || [str isEqualToString:@""])
+
+#define isNotReachable ([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] == NotReachable)
+
+#define HeadViewHeight ([UIApplication sharedApplication].statusBarFrame.size.height + 44)
+
+#define FootViewHeight 49
+#define UIStatusHeight [UIApplication sharedApplication].statusBarFrame.size.height
+
+#define UIWidth     [UIScreen mainScreen].bounds.size.width
+#define UIHeight    [UIScreen mainScreen].bounds.size.height
+#define ScreenSize  ([UIScreen mainScreen].applicationFrame.size.width *[UIScreen mainScreen].scale)
+#define UITopViewHeight UIHeight - HeadViewHeight
+#define UIViewHeight UIHeight - HeadViewHeight - FootViewHeight
+
+#define kP5 CGPointMake(UIWidth/2 ,UIHeight/2)
+
+#define IOS_VERSION_7_OR_ABOVE (([[[UIDevice currentDevice] systemVersion] floatValue] == 7.0)? (YES):(NO))
+
+//判断iphone6
+
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+
+//判断iphone6+
+
+#define iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define IPAD ([[UIDevice currentDevice] respondsToSelector:@selector(userInterfaceIdiom)] && [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+
+#define defaultTeacherIcon     [UIImage imageNamed:@"Teacher_Default"]
+
+
+#define FONT(F) [UIFont fontWithName:@"HiraKakuProN-W3" size:F]
+#define BOldFONT(F) [UIFont fontWithName:@"HiraKakuProN-W6" size:F]
+
+#define defaultPageSize @(20)
+
+#define ColorFromImageName(name) [UIColor colorWithPatternImage:[UIImage imageNamed:name]]
+
+#define RGB(x,y,z) [UIColor colorWithRed:x/255.0 green:y/255.0 blue:z/255.0 alpha:1.0]
+#define RGBA(x,y,z,a) [UIColor colorWithRed:x/255.0 green:y/255.0 blue:z/255.0 alpha:a]
+
+#define DefaultTextColor RGB(51, 51, 51)
+#define DefaultContentColor RGB(102, 102, 102)
+
+#define DefaultTableCellHighColor RGB(229, 229, 229)
+
+#define TopSeparatorColor RGB(170, 170, 170) // 160 改成170
+#define SeparatorColor RGB(222, 222, 222) // 160 改成170
+#define PublicbgColor  RGB(248, 249, 250) // 160 改成170
+#define PublicNavigationBgColor RGB(12, 141, 207)
+// 设置背景颜色
+#define PublicSettingBgColor RGB(248, 249, 250)
+
+//#define NavigationBarBGColor RGB(241, 91, 91)
+#define NavigationBarBGColor RGB(236,82,82)
+
+/**
+ *  APP 信息
+ */
+#define KDEVICENAME [[UIDevice currentDevice] name]
+#define KSYSTEMNAME [[UIDevice currentDevice] systemName]  // e.g. @"iOS"
+#define KSYSTEMVERSION [[UIDevice currentDevice] systemVersion]
+#define KDEVICEMODEL [[UIDevice currentDevice] model] //@"iPhone", @"iPod touch"
+
+#define InfoDictionary  [[NSBundle mainBundle] infoDictionary]
+#define KApp_Name       [InfoDictionary objectForKey:@"CFBundleDisplayName"]
+#define KApp_Version    [InfoDictionary objectForKey:@"CFBundleShortVersionString"]
+
+
+#ifdef DEBUG
+#define MYLog(format, ...)  NSLog(@"%s(%d行): " format, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define MYLog(format, ...)
+#endif
+
+#ifdef DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(...)
+#endif
+
+
+
+#define LocalText(text) NSLocalizedString(text, nil)
+
+
+//G－C－D
+#define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+#define MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
+#define AFTER(time, block)  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, time * NSEC_PER_SEC), dispatch_get_main_queue(), block);
+
+
+
+#define client_id     @"bt_app_ios"
+#define client_secret @"9c1e6634ce1c5098e056628cd66a17a5"
+
+//FIXME:  appstoreId
+#define APPSTOREAPPLICATIONID   955357564
+
+
+//第三方的各种配置
+#define appChannel_UMeng    @"App Store"
+//友盟
+#define kUMengAppKey        @"54bfd442fd98c5ac90001423"
+
+//百度
+#define kBaiduMapAppKey     @"SBxsL9eLgVWfrY4w7GNHzIrP"
+#define kShareSdkKey        @"3f9ca2ef5c50"
+// 微信
+#define kWeixinAppID        @"wxd3604c2fd3c4d078"
+#define kWeixinAppSecret    @"6482f573d148de638fd9fcdb00bfb87c"
+#define SystemURL           @"http://www.bantangapp.com/open.php"
+
+// 新浪
+#define kSinaAppID          @""
+#define kSinaAppSecret      @""
+
+// QQ 空间
+#define kQQSpeceAppID       @""
+#define kQQSpeceAppSecret   @""
+
+#define kQQAppID            @""
+#define kQQAppKey           @""
+#define QQ16AppID           @""
+
+
+/* 保存在用户首选项的中的一些公共的key */
+#define USER_ACCESSTOKEN    @"authToken"
+#define USER_USERDATA       @"userData"
+#define USER_POASTWEIBO     @"isFirstPostWeiBo"
+
+
+//NSUserDefaults 实例化
+#define USER_DEFAULT [NSUserDefaults standardUserDefaults]
+#define NOTIFATION_LOGINSUCCESS_NAME @"LoginSuceess"
+#define NOTIFATION_COLLECT_ITEM_NAME @"collectItemClick"
+
+#define ISONLINE [[NSUserDefaults standardUserDefaults] boolForKey:@"isonline"]
+#endif
