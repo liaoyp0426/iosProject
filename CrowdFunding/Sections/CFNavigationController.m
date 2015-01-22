@@ -7,17 +7,32 @@
 //
 
 #import "CFNavigationController.h"
+#import "SloppySwiper.h"
 
-@interface CFNavigationController ()
+@interface CFNavigationController ()<UIGestureRecognizerDelegate>
+
+@property(nonatomic ,strong)SloppySwiper *swipper;
 
 @end
 
 @implementation CFNavigationController
 
+- (instancetype)initWithRootViewController:(UIViewController *)rootViewController
+{
+   id sender =[super initWithRootViewController:rootViewController];
+    if (sender) {
+        
+        
+    }
+    return sender;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationBar.hidden = YES;
-
+    
+    self.swipper = [[SloppySwiper alloc] initWithNavigationController:self];
+    self.delegate = self.swipper;
 }
 
 - (void)didReceiveMemoryWarning {

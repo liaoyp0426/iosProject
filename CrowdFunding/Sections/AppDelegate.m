@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CFNavigationController.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,8 +22,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = RGB(255, 245, 245);
     
-    BaseViewController *baseVC  = [[BaseViewController alloc] init];
-    CFNavigationController *rootVC = [[CFNavigationController alloc] initWithRootViewController:baseVC];
+    LoginViewController *loginVC = [[LoginViewController alloc] init];
+    CFNavigationController *rootVC = [[CFNavigationController alloc] initWithRootViewController:loginVC];
     self.window.rootViewController = rootVC;
     _rootViewController = rootVC;
     

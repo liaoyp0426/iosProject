@@ -14,9 +14,28 @@
 
 @implementation LoginViewController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _isNeedBackButton= YES;
+        _isNeedNavigationBar = YES;
+
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _titleLabel.text  = @"登录";
+    [self createCompletebuttonwithAction:@selector(goBack) withTitle:@"设置"];
+}
+
+- (void)goBack
+{
+    
+    [self.navigationController pushViewController:[BaseViewController new] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

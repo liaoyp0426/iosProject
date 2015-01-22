@@ -29,6 +29,9 @@
 		92B287B91A7006DC00A025EC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B287B81A7006DC00A025EC /* BaseViewController.m */; };
 		92B287BC1A70070700A025EC /* CFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B287BB1A70070700A025EC /* CFNavigationController.m */; };
 		92B287C01A700C6600A025EC /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B287BF1A700C6600A025EC /* BlockAlertView.m */; };
+		92BEA52C1A70F020002417D3 /* SloppySwiper.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BEA5271A70F020002417D3 /* SloppySwiper.m */; };
+		92BEA52D1A70F020002417D3 /* SSWAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BEA5291A70F020002417D3 /* SSWAnimator.m */; };
+		92BEA52E1A70F020002417D3 /* SSWDirectionalPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BEA52B1A70F020002417D3 /* SSWDirectionalPanGestureRecognizer.m */; };
 		B3A14AFBAC1779E38292AAB5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C87D9B42C0CA4F5E81EB6CC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +93,12 @@
 		92B287BB1A70070700A025EC /* CFNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFNavigationController.m; path = Sections/CFNavigationController.m; sourceTree = "<group>"; };
 		92B287BE1A700C6600A025EC /* BlockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockAlertView.h; sourceTree = "<group>"; };
 		92B287BF1A700C6600A025EC /* BlockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockAlertView.m; sourceTree = "<group>"; };
+		92BEA5261A70F020002417D3 /* SloppySwiper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SloppySwiper.h; sourceTree = "<group>"; };
+		92BEA5271A70F020002417D3 /* SloppySwiper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SloppySwiper.m; sourceTree = "<group>"; };
+		92BEA5281A70F020002417D3 /* SSWAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSWAnimator.h; sourceTree = "<group>"; };
+		92BEA5291A70F020002417D3 /* SSWAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSWAnimator.m; sourceTree = "<group>"; };
+		92BEA52A1A70F020002417D3 /* SSWDirectionalPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSWDirectionalPanGestureRecognizer.h; sourceTree = "<group>"; };
+		92BEA52B1A70F020002417D3 /* SSWDirectionalPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSWDirectionalPanGestureRecognizer.m; sourceTree = "<group>"; };
 		9C87D9B42C0CA4F5E81EB6CC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F38924992BE98CD6E899BC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -300,6 +309,7 @@
 		92B287A41A70016200A025EC /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				92BEA5251A70F020002417D3 /* SloppySwiper */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
@@ -326,6 +336,19 @@
 				92B287BB1A70070700A025EC /* CFNavigationController.m */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		92BEA5251A70F020002417D3 /* SloppySwiper */ = {
+			isa = PBXGroup;
+			children = (
+				92BEA5261A70F020002417D3 /* SloppySwiper.h */,
+				92BEA5271A70F020002417D3 /* SloppySwiper.m */,
+				92BEA5281A70F020002417D3 /* SSWAnimator.h */,
+				92BEA5291A70F020002417D3 /* SSWAnimator.m */,
+				92BEA52A1A70F020002417D3 /* SSWDirectionalPanGestureRecognizer.h */,
+				92BEA52B1A70F020002417D3 /* SSWDirectionalPanGestureRecognizer.m */,
+			);
+			path = SloppySwiper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,11 +490,14 @@
 				92B287AD1A70016200A025EC /* GWXGlobalConfig.m in Sources */,
 				92B287AA1A70016200A025EC /* UIImage+Tint.m in Sources */,
 				92B287A91A70016200A025EC /* UIImage+MJ.m in Sources */,
+				92BEA52E1A70F020002417D3 /* SSWDirectionalPanGestureRecognizer.m in Sources */,
+				92BEA52D1A70F020002417D3 /* SSWAnimator.m in Sources */,
 				92B287A61A70016200A025EC /* CacheUtil.m in Sources */,
 				92B287AC1A70016200A025EC /* DataRequest.m in Sources */,
 				92B2875B1A6FFCDE00A025EC /* main.m in Sources */,
 				92B287B01A70016200A025EC /* BaseModel.m in Sources */,
 				92B287B11A70016200A025EC /* AppDelegate.m in Sources */,
+				92BEA52C1A70F020002417D3 /* SloppySwiper.m in Sources */,
 				92B287B91A7006DC00A025EC /* BaseViewController.m in Sources */,
 				92B287A81A70016200A025EC /* NSString+MD5.m in Sources */,
 				92B287AB1A70016200A025EC /* CCFileManager.m in Sources */,
