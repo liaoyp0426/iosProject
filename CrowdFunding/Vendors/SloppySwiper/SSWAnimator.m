@@ -51,7 +51,7 @@ UIViewAnimationOptions const SSWNavigationTransitionCurve = 7 << 16;
     [[transitionContext containerView] insertSubview:toViewController.view belowSubview:fromViewController.view];
 
     // parallax effect; the offset matches the one used in the pop animation in iOS 7.1
-    CGFloat toViewControllerXTranslation = - CGRectGetWidth([transitionContext containerView].bounds) * 0.3f;
+    CGFloat toViewControllerXTranslation = - CGRectGetWidth([transitionContext containerView].bounds) * 0.001f;
     toViewController.view.transform = CGAffineTransformMakeTranslation(toViewControllerXTranslation, 0);
 
     // add a shadow on the left side of the frontmost view controller

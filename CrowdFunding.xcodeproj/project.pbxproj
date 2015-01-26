@@ -32,6 +32,9 @@
 		92BEA52C1A70F020002417D3 /* SloppySwiper.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BEA5271A70F020002417D3 /* SloppySwiper.m */; };
 		92BEA52D1A70F020002417D3 /* SSWAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BEA5291A70F020002417D3 /* SSWAnimator.m */; };
 		92BEA52E1A70F020002417D3 /* SSWDirectionalPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BEA52B1A70F020002417D3 /* SSWDirectionalPanGestureRecognizer.m */; };
+		92BEA5351A70F6D8002417D3 /* Mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BEA5301A70F6D8002417D3 /* Mask.png */; };
+		92BEA5361A70F6D8002417D3 /* PullToRefreshCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BEA5321A70F6D8002417D3 /* PullToRefreshCoreTextView.m */; };
+		92BEA5371A70F6D8002417D3 /* UIScrollView+PullToRefreshCoreText.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BEA5341A70F6D8002417D3 /* UIScrollView+PullToRefreshCoreText.m */; };
 		B3A14AFBAC1779E38292AAB5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C87D9B42C0CA4F5E81EB6CC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +102,11 @@
 		92BEA5291A70F020002417D3 /* SSWAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSWAnimator.m; sourceTree = "<group>"; };
 		92BEA52A1A70F020002417D3 /* SSWDirectionalPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSWDirectionalPanGestureRecognizer.h; sourceTree = "<group>"; };
 		92BEA52B1A70F020002417D3 /* SSWDirectionalPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSWDirectionalPanGestureRecognizer.m; sourceTree = "<group>"; };
+		92BEA5301A70F6D8002417D3 /* Mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mask.png; sourceTree = "<group>"; };
+		92BEA5311A70F6D8002417D3 /* PullToRefreshCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullToRefreshCoreTextView.h; sourceTree = "<group>"; };
+		92BEA5321A70F6D8002417D3 /* PullToRefreshCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshCoreTextView.m; sourceTree = "<group>"; };
+		92BEA5331A70F6D8002417D3 /* UIScrollView+PullToRefreshCoreText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+PullToRefreshCoreText.h"; sourceTree = "<group>"; };
+		92BEA5341A70F6D8002417D3 /* UIScrollView+PullToRefreshCoreText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+PullToRefreshCoreText.m"; sourceTree = "<group>"; };
 		9C87D9B42C0CA4F5E81EB6CC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F38924992BE98CD6E899BC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -309,6 +317,7 @@
 		92B287A41A70016200A025EC /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				92BEA52F1A70F6D8002417D3 /* PullToRefreshCoreText */,
 				92BEA5251A70F020002417D3 /* SloppySwiper */,
 			);
 			path = Vendors;
@@ -349,6 +358,18 @@
 				92BEA52B1A70F020002417D3 /* SSWDirectionalPanGestureRecognizer.m */,
 			);
 			path = SloppySwiper;
+			sourceTree = "<group>";
+		};
+		92BEA52F1A70F6D8002417D3 /* PullToRefreshCoreText */ = {
+			isa = PBXGroup;
+			children = (
+				92BEA5301A70F6D8002417D3 /* Mask.png */,
+				92BEA5311A70F6D8002417D3 /* PullToRefreshCoreTextView.h */,
+				92BEA5321A70F6D8002417D3 /* PullToRefreshCoreTextView.m */,
+				92BEA5331A70F6D8002417D3 /* UIScrollView+PullToRefreshCoreText.h */,
+				92BEA5341A70F6D8002417D3 /* UIScrollView+PullToRefreshCoreText.m */,
+			);
+			path = PullToRefreshCoreText;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +457,7 @@
 				92B287641A6FFCDE00A025EC /* Main.storyboard in Resources */,
 				92B287691A6FFCDE00A025EC /* LaunchScreen.xib in Resources */,
 				92B287661A6FFCDE00A025EC /* Images.xcassets in Resources */,
+				92BEA5351A70F6D8002417D3 /* Mask.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92BEA5361A70F6D8002417D3 /* PullToRefreshCoreTextView.m in Sources */,
 				92B287B21A70016200A025EC /* ViewController.m in Sources */,
 				92B287AD1A70016200A025EC /* GWXGlobalConfig.m in Sources */,
 				92B287AA1A70016200A025EC /* UIImage+Tint.m in Sources */,
@@ -493,6 +516,7 @@
 				92BEA52E1A70F020002417D3 /* SSWDirectionalPanGestureRecognizer.m in Sources */,
 				92BEA52D1A70F020002417D3 /* SSWAnimator.m in Sources */,
 				92B287A61A70016200A025EC /* CacheUtil.m in Sources */,
+				92BEA5371A70F6D8002417D3 /* UIScrollView+PullToRefreshCoreText.m in Sources */,
 				92B287AC1A70016200A025EC /* DataRequest.m in Sources */,
 				92B2875B1A6FFCDE00A025EC /* main.m in Sources */,
 				92B287B01A70016200A025EC /* BaseModel.m in Sources */,
@@ -631,6 +655,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "${SRCROOT}/CrowdFunding/CrowFundingPrefixHeader.pch";
 				INFOPLIST_FILE = CrowdFunding/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -643,6 +668,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "${SRCROOT}/CrowdFunding/CrowFundingPrefixHeader.pch";
 				INFOPLIST_FILE = CrowdFunding/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
